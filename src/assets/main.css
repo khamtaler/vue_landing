@@ -1,35 +1,42 @@
-@import './base.css';
+@import "./base.css";
 
 #app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+  font-weight: 300;
+}
+p {
+  font-size: 1.2rem;
+}
+.section {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.section---fullWidth {
+  max-width: 100%;
+  width: 100%;
+}
+.button {
+  color: black;
+  background-color: #02cab9;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border-radius: 4px;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  line-height: 120%;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+.button:hover {
+  background-color: #d694f7;
+  transition: 0.3s;
 }
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.section---vertical {
+  display: flex;
+  flex-direction: column;
 }

@@ -5,7 +5,13 @@ import ParallaxPhoto from "./ParallaxPhoto.vue";
 <template>
   <section class="section section---fullWidth section---removeTopDistance">
     <header class="header">
-      <img alt="Tuoglos logo" class="logo" src="../assets/logo.svg" width="125" height="125" />
+      <img
+        alt="Tuoglos logo"
+        class="logo"
+        src="../assets//images/logo.svg"
+        width="125"
+        height="125"
+      />
 
       <div class="wrapper">
         <Heading

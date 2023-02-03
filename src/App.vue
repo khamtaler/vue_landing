@@ -3,6 +3,8 @@ import ArchiveTile from "./components/ArchiveTile.vue";
 import DefaultSection from "./components/DefaultSection.vue";
 import Header from "./components/Header.vue";
 import ReasonTile from "./components/ReasonTile.vue";
+import CitiesList from "./components/CitiesList.vue";
+import Data from "./assets/cityData/Cities.vue";
 import FullStar from "./components/icons/iconFullStar.vue";
 import HalfStar from "./components/icons/iconHalfStar.vue";
 import IconGlobe from "./components/icons/IconGlobe.vue";
@@ -109,6 +111,18 @@ i w ogłoszeniach"
       </div>
       <a class="button button---VerticalMargin" href="#/">+ Dodaj ogłoszenie do 100 portali</a>
     </DefaultSection>
+    <DefaultSection class="section--citiesList" header="Gdzie opublikujemy Twoje ogłoszenie?">
+      <p class="section--citiesListP">
+        Grupa Tuogoś to ogólnopolski portal ogłoszeniowy Tuogłoś.pl, regionalne portale:
+        naslasku.com i nadolnymslasku.com, wtrojmiescie.com, 100 portali w stu największych miastach
+        Polski i 28 portali dla Polaków za granicą.
+      </p>
+      <CitiesList header="Portale w Polsce" :list="Data.polishCities" />
+    </DefaultSection>
+    <DefaultSection class="section--citiesList">
+      <img class="section--citiesListMap" src="./assets/images/polonia.jpg" />
+      <CitiesList header="Portale dla Polaków za granicą" :list="Data.worldCities" />
+    </DefaultSection>
   </main>
 </template>
 
@@ -176,5 +190,12 @@ i w ogłoszeniach"
   width: 35px;
   height: auto;
   filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(37deg) brightness(102%) contrast(105%);
+}
+.section--citiesListP {
+  text-align: center;
+}
+.section--citiesListMap {
+  width: 80%;
+  margin: auto;
 }
 </style>

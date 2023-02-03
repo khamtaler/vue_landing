@@ -2,7 +2,6 @@
 defineProps({
   header: {
     type: String,
-    required: true,
   },
 });
 </script>
@@ -11,7 +10,7 @@ defineProps({
   <section class="section section---vertical">
     <div class="section--headerContainer">
       <h3 class="section--header">{{ header }}</h3>
-      <hr class="section---headerUnderline" />
+      <hr v-if="header" class="section---headerUnderline" />
     </div>
     <slot></slot>
   </section>

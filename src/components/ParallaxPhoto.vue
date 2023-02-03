@@ -1,11 +1,4 @@
-<script setup>
-defineProps({
-  boxMessage: {
-    type: String,
-    required: true,
-  },
-});
-</script>
+<script setup></script>
 
 <template>
   <div class="parallaxContainer">
@@ -21,7 +14,6 @@ export default {};
 
 <style lang="css" scoped>
 .parallaxContainer {
-  position: relative;
   width: 50%;
   background-image: url(../assets/images/laptop-woman-2.jpg);
   background-repeat: no-repeat;

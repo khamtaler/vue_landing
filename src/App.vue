@@ -2,8 +2,13 @@
 import ArchiveTile from "./components/ArchiveTile.vue";
 import DefaultSection from "./components/DefaultSection.vue";
 import Header from "./components/Header.vue";
+import ReasonTile from "./components/ReasonTile.vue";
 import FullStar from "./components/icons/iconFullStar.vue";
 import HalfStar from "./components/icons/iconHalfStar.vue";
+import IconGlobe from "./components/icons/IconGlobe.vue";
+import IconCheck from "./components/icons/IconCheck.vue";
+import IconChain from "./components/icons/IconChain.vue";
+import IconDocument from "./components/icons/IconDocument.vue";
 </script>
 
 <template>
@@ -77,6 +82,33 @@ import HalfStar from "./components/icons/iconHalfStar.vue";
         </p>
       </div>
     </DefaultSection>
+    <DefaultSection
+      class="reasonsSection section---fullWidth section---whiteHeader"
+      header="Dlaczego warto?"
+    >
+      <div class="reasonSection--container">
+        <ReasonTile desc="Ponad 100 portali ogłoszeniowych w całej Polsce">
+          <IconGlobe class="reasonSection--icon" />
+        </ReasonTile>
+        <ReasonTile
+          desc="Automatyzujemy proces dodawania ogłoszeń jednocześnie do 100 serwisów. Oszczędzasz czas i unikasz pomyłek."
+        >
+          <IconCheck class="reasonSection--icon" />
+        </ReasonTile>
+        <ReasonTile
+          desc="Generujemy automatyczny raport, wysyłając na adres e-mail 100 linków do ogłoszeń na naszych 100 portalach."
+        >
+          <IconDocument class="reasonSection--icon"
+        /></ReasonTile>
+        <ReasonTile
+          desc="Umożliwiamy zamieszczanie linków do Twojej strony www - na stronach głównych
+i w ogłoszeniach"
+        >
+          <IconChain class="reasonSection--icon"
+        /></ReasonTile>
+      </div>
+      <a class="button button---VerticalMargin" href="#/">+ Dodaj ogłoszenie do 100 portali</a>
+    </DefaultSection>
   </main>
 </template>
 
@@ -123,5 +155,26 @@ import HalfStar from "./components/icons/iconHalfStar.vue";
 }
 .archiveSection--star:first-child {
   margin-left: 8px;
+}
+
+.reasonsSection {
+  background: linear-gradient(#002de291 100%, rgba(199, 0, 98, 0.5) 100%),
+    url(./assets/images/laptop-woman-2.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.reasonSection--container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1000px;
+  margin: 50px auto;
+}
+.reasonSection--icon {
+  width: 35px;
+  height: auto;
+  filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(37deg) brightness(102%) contrast(105%);
 }
 </style>

@@ -8,14 +8,18 @@ p {
 }
 .section {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   width: 100%;
   max-width: 1000px;
-  margin: 50px auto;
+  margin: 30px auto 0px;
+  padding: 20px 0px;
 }
 .section---fullWidth {
   max-width: 100%;
-  width: 100%;
+}
+.section---whiteHeader {
+  color: #fff;
 }
 .button {
   color: black;
@@ -28,10 +32,14 @@ p {
     border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   line-height: 120%;
   text-align: center;
+  text-decoration: none;
   vertical-align: middle;
   cursor: pointer;
 }
-
+.button---VerticalMargin {
+  display: inline-block;
+  margin: 20px auto;
+}
 .button:hover {
   background-color: #d694f7;
   transition: 0.3s;

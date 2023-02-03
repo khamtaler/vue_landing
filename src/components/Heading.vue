@@ -52,10 +52,6 @@ defineProps({
 .greetings--header {
   text-align: center;
 }
-.button---VerticalMargin {
-  display: inline-block;
-  margin: 20px 0px;
-}
 
 @media (min-width: 1024px) {
   .greetings--header {

@@ -3,7 +3,7 @@ import Heading from "./Heading.vue";
 import ParallaxPhoto from "./ParallaxPhoto.vue";
 </script>
 <template>
-  <section class="section section---fullWidth section---noTopMargin">
+  <section class="section section---fullWidth section---removeTopDistance">
     <header class="header">
       <img alt="Tuoglos logo" class="logo" src="../assets/logo.svg" width="125" height="125" />
 
@@ -28,8 +28,9 @@ export default {};
 </script>
 
 <style scoped>
-.section---noTopMargin {
+.section---removeTopDistance {
   margin-top: 0px;
+  padding-top: 0px;
 }
 .logo {
   display: block;

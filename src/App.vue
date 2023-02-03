@@ -11,6 +11,7 @@ import IconGlobe from "./components/icons/IconGlobe.vue";
 import IconCheck from "./components/icons/IconCheck.vue";
 import IconChain from "./components/icons/IconChain.vue";
 import IconDocument from "./components/icons/IconDocument.vue";
+import PriceCircle from "./components/PriceCircle.vue";
 </script>
 
 <template>
@@ -123,6 +124,35 @@ i w ogłoszeniach"
       <img class="section--citiesListMap" src="./assets/images/polonia.jpg" />
       <CitiesList header="Portale dla Polaków za granicą" :list="Data.worldCities" />
     </DefaultSection>
+    <DefaultSection class="sectionPricing section---fullWidth">
+      <div class="sectionPricing--container">
+        <div class="sectionPricing--containerInnerLeft">
+          <h3 class="sectionPricing--header">Ile to kosztuje?</h3>
+          <p class="sectionPricing--p">
+            Tylko 2 minuty zajmie Ci wypełnienie jednego formularza i wybranie miast, w których
+            chcesz znaleźć klientów na swoje usługi i towary. Możesz zamieścić ogłoszenie w dowolnej
+            ilości serwisów - koszt 50 groszy za 1 miasto, lub dodać je automatycznie do wszystkich
+            100 serwisów za jedyne 17 zł. Zwrotnie otrzymasz email z raportem, w którym będą linki
+            do wszystkich Twoich ogłoszeń.
+          </p>
+          <p>Na życzenie wystawiamy faktury VAT.</p>
+        </div>
+        <div class="sectionPricing--containerInnerRight">
+          <div class="sectionPricing--prices">
+            <div class="sectionPricing--pricesInner">
+              <PriceCircle price="17zł" amount="100 portali" />
+              <p class="sectionPricing--pricesInnerP">lub</p>
+              <PriceCircle price="50gr" amount="1 portal" />
+            </div>
+            <p class="sectionPricing--containerInnerRightP">
+              Wypełnij formularz i dodaj swoje ogłoszenie wybierając konkretne serwisy lub ogłoś się
+              w całej Polsce!
+            </p>
+          </div>
+          <a class="button button---VerticalMargin" href="#/">+ Dodaj ogłoszenie do 100 portali</a>
+        </div>
+      </div>
+    </DefaultSection>
   </main>
 </template>
 
@@ -179,7 +209,8 @@ i w ogłoszeniach"
   background-size: cover;
   background-attachment: fixed;
 }
-.reasonSection--container {
+.reasonSection--container,
+.sectionPricing--container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -197,5 +228,43 @@ i w ogłoszeniach"
 .section--citiesListMap {
   width: 80%;
   margin: auto;
+}
+.sectionPricing {
+  background: #002fe2;
+  color: #fff;
+}
+.sectionPricing--header {
+  text-align: left;
+  font-size: 52px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.sectionPricing--p {
+  margin: 30px 0px;
+}
+.sectionPricing--containerInnerLeft {
+  width: 55%;
+}
+.sectionPricing--containerInnerRight {
+  width: 40%;
+  text-align: center;
+}
+
+.sectionPricing--prices {
+  background: #fff;
+  color: #000;
+  padding: 20px;
+  border-radius: 5px;
+}
+.sectionPricing--pricesInner {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.sectionPricing--pricesInnerP {
+  color: #002de2;
+  font-size: 25px;
 }
 </style>

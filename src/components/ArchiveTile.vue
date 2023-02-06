@@ -10,11 +10,6 @@ defineProps({
 <template>
   <div class="archiveSection--item">
     <h4 class="archiveSection--year">{{ year }}</h4>
-    <!-- <img
-      class="archiveSection--image"
-      :src="`/src/assets/images/${fileName}`"
-      :alt="`${altText}`"
-    /> -->
     <slot></slot>
   </div>
 </template>

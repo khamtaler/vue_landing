@@ -4,7 +4,7 @@ import DefaultSection from "./components/DefaultSection.vue";
 import Header from "./components/Header.vue";
 import ReasonTile from "./components/ReasonTile.vue";
 import CitiesList from "./components/CitiesList.vue";
-import Data from "./assets/cityData/Cities.vue";
+import Data from "./constants/Cities.vue";
 import FullStar from "./components/icons/iconFullStar.vue";
 import HalfStar from "./components/icons/iconHalfStar.vue";
 import IconGlobe from "./components/icons/IconGlobe.vue";
@@ -99,11 +99,11 @@ i w ogłoszeniach"
         naslasku.com i nadolnymslasku.com, wtrojmiescie.com, 100 portali w stu największych miastach
         Polski i 28 portali dla Polaków za granicą.
       </p>
-      <CitiesList header="Portale w Polsce" :list="Data.polishCities" />
+      <CitiesList header="Portale w Polsce" :list="Data.POLISH_CITIES" />
     </DefaultSection>
     <DefaultSection class="section--citiesList">
       <img class="section--citiesListMap" src="./assets/images/polonia.jpg" />
-      <CitiesList header="Portale dla Polaków za granicą" :list="Data.worldCities" />
+      <CitiesList header="Portale dla Polaków za granicą" :list="Data.WORLD_CITIES" />
     </DefaultSection>
     <DefaultSection class="sectionPricing section---fullWidth">
       <div class="sectionPricing--container">

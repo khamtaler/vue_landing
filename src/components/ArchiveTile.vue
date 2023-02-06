@@ -18,11 +18,12 @@ defineProps({
 <template>
   <div class="archiveSection--item">
     <h4 class="archiveSection--year">{{ year }}</h4>
-    <img
+    <!-- <img
       class="archiveSection--image"
       :src="`/src/assets/images/${fileName}`"
       :alt="`${altText}`"
-    />
+    /> -->
+    <slot></slot>
   </div>
 </template>
 
@@ -35,17 +36,5 @@ defineProps({
   text-align: center;
   font-size: 1.2rem;
   font-weight: 500;
-}
-
-.archiveSection--item:hover {
-  overflow: visible;
-}
-.archiveSection--image {
-  width: 100%;
-  height: 300px;
-}
-.archiveSection--item:hover .archiveSection--image {
-  scale: 1.5;
-  z-index: 2;
 }
 </style>

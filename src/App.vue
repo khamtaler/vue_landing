@@ -43,19 +43,15 @@ import PriceCircle from "./components/PriceCircle.vue";
           umożliwiając skuteczną sprzedaż ich towarów i usług.
         </p>
         <div class="archiveSection--archive">
-          <ArchiveTile
-            class="archiveSection--archiveTile"
-            year="2010r."
-            fileName="2010.png"
-            altText="Archive 2010"
-          >
+          <ArchiveTile class="archiveSection--archiveTile" year="2010r.">
+            <img class="archiveSection--image" src="./assets/images/2010.png" alt="Archive 2010" />
           </ArchiveTile>
           <ArchiveTile
             class="archiveSection--archiveTile"
             year="2018r."
             fileName="2018.png"
             altText="Archive 2018"
-          >
+            ><img class="archiveSection--image" src="./assets/images/2018.png" alt="Archive 2018" />
           </ArchiveTile>
 
           <ArchiveTile
@@ -63,14 +59,14 @@ import PriceCircle from "./components/PriceCircle.vue";
             year="2020r."
             fileName="2020.png"
             altText="Archive 2020"
-          >
+            ><img class="archiveSection--image" src="./assets/images/2020.png" alt="Archive 2020" />
           </ArchiveTile>
           <ArchiveTile
             class="archiveSection--archiveTile"
             year="2022r."
             fileName="2021.png"
             altText="Archive 2022"
-          >
+            ><img class="archiveSection--image" src="./assets/images/2021.png" alt="Archive 2022" />
           </ArchiveTile>
         </div>
         <p class="archiveSection--rating">
@@ -166,6 +162,10 @@ i w ogłoszeniach"
 .mapSection--paragraph {
   width: 50%;
 }
+
+.mapSection--image {
+  mix-blend-mode: multiply;
+}
 .mapSection--paragraph {
   margin-left: 30px;
 }
@@ -177,12 +177,27 @@ i w ogłoszeniach"
   margin-top: 50px;
 }
 
+.archiveSection--image {
+  width: 100%;
+  height: 300px;
+}
+
+.archiveSection--item:hover {
+  overflow: visible;
+}
+
+.archiveSection--item:hover .archiveSection--image {
+  scale: 1.5;
+  z-index: 2;
+}
+
 .archiveSection--rating {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
+
 .archiveSection--ratingNumbers {
   color: #002de2;
   margin-left: 10px;

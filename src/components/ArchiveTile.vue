@@ -4,14 +4,6 @@ defineProps({
     type: String,
     required: true,
   },
-  fileName: {
-    type: String,
-    required: true,
-  },
-  altText: {
-    type: String,
-    required: true,
-  },
 });
 </script>
 

@@ -46,36 +46,21 @@ import PriceCircle from "./components/PriceCircle.vue";
           <ArchiveTile class="archiveSection--archiveTile" year="2010r.">
             <img class="archiveSection--image" src="./assets/images/2010.png" alt="Archive 2010" />
           </ArchiveTile>
-          <ArchiveTile
-            class="archiveSection--archiveTile"
-            year="2018r."
-            fileName="2018.png"
-            altText="Archive 2018"
+          <ArchiveTile class="archiveSection--archiveTile" year="2018r."
             ><img class="archiveSection--image" src="./assets/images/2018.png" alt="Archive 2018" />
           </ArchiveTile>
 
-          <ArchiveTile
-            class="archiveSection--archiveTile"
-            year="2020r."
-            fileName="2020.png"
-            altText="Archive 2020"
+          <ArchiveTile class="archiveSection--archiveTile" year="2020r."
             ><img class="archiveSection--image" src="./assets/images/2020.png" alt="Archive 2020" />
           </ArchiveTile>
-          <ArchiveTile
-            class="archiveSection--archiveTile"
-            year="2022r."
-            fileName="2021.png"
-            altText="Archive 2022"
+          <ArchiveTile class="archiveSection--archiveTile" year="2022r."
             ><img class="archiveSection--image" src="./assets/images/2021.png" alt="Archive 2022" />
           </ArchiveTile>
         </div>
         <p class="archiveSection--rating">
           Jak nasi klienci oceniają naszą usługę:<span class="archiveSection--ratingNumbers"
             >4,89
-            <FullStar class="archiveSection--star" />
-            <FullStar class="archiveSection--star" />
-            <FullStar class="archiveSection--star" />
-            <FullStar class="archiveSection--star" />
+            <FullStar v-for="i in 4" class="archiveSection--star" />
             <HalfStar class="archiveSection--star" />
           </span>
         </p>

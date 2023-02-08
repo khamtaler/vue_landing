@@ -58,4 +58,28 @@ defineProps({
     text-align: left;
   }
 }
+@media (max-width: 1024px) {
+  .greetings {
+    text-align: center;
+  }
+  .greetings--header {
+    text-align: center;
+    padding: 30px;
+  }
+  .greetings--list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .greetings--header {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  .greetings--listItem {
+    font-size: 1.2rem;
+  }
+}
 </style>

@@ -61,10 +61,22 @@ export default {};
     max-width: 500px;
     margin-left: auto;
   }
-
   .logo {
     width: 300px;
     height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .logo {
+    width: 200px;
+    height: auto;
+  }
+}
+@media (max-width: 767px) {
+  .logo {
+    width: 300px;
+    height: auto;
+    margin: auto;
   }
 }
 </style>

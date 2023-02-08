@@ -70,25 +70,25 @@ import PriceCircle from "./components/PriceCircle.vue";
       class="reasonsSection section---fullWidth section---whiteHeader"
       header="Dlaczego warto?"
     >
-      <div class="reasonSection--container">
+      <div class="reasonsSection--container">
         <ReasonTile desc="Ponad 100 portali ogłoszeniowych w całej Polsce">
-          <IconGlobe class="reasonSection--icon" />
+          <IconGlobe class="reasonsSection--icon" />
         </ReasonTile>
         <ReasonTile
           desc="Automatyzujemy proces dodawania ogłoszeń jednocześnie do 100 serwisów. Oszczędzasz czas i unikasz pomyłek."
         >
-          <IconCheck class="reasonSection--icon" />
+          <IconCheck class="reasonsSection--icon" />
         </ReasonTile>
         <ReasonTile
           desc="Generujemy automatyczny raport, wysyłając na adres e-mail 100 linków do ogłoszeń na naszych 100 portalach."
         >
-          <IconDocument class="reasonSection--icon"
+          <IconDocument class="reasonsSection--icon"
         /></ReasonTile>
         <ReasonTile
           desc="Umożliwiamy zamieszczanie linków do Twojej strony www - na stronach głównych
 i w ogłoszeniach"
         >
-          <IconChain class="reasonSection--icon"
+          <IconChain class="reasonsSection--icon"
         /></ReasonTile>
       </div>
       <a class="button button---VerticalMargin" href="#/">+ Dodaj ogłoszenie do 100 portali</a>
@@ -143,10 +143,6 @@ i w ogłoszeniach"
   align-items: center;
   margin: 30px 0px;
 }
-.mapSection--image,
-.mapSection--paragraph {
-  width: 50%;
-}
 
 .mapSection--image {
   mix-blend-mode: multiply;
@@ -167,6 +163,10 @@ i w ogłoszeniach"
   height: 300px;
 }
 
+.mapSection--image,
+.mapSection--paragraph {
+  width: 100%;
+}
 .archiveSection--item:hover {
   overflow: visible;
 }
@@ -209,15 +209,16 @@ i w ogłoszeniach"
   background-size: cover;
   background-attachment: fixed;
 }
-.reasonSection--container,
+.reasonsSection--container,
 .sectionPricing--container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   max-width: 1000px;
   margin: 50px auto;
+  flex-wrap: wrap;
 }
-.reasonSection--icon {
+.reasonsSection--icon {
   width: 35px;
   height: auto;
   filter: invert(98%) sepia(0%) saturate(0%) hue-rotate(37deg) brightness(102%) contrast(105%);
@@ -242,13 +243,6 @@ i w ogłoszeniach"
 .sectionPricing--p {
   margin: 30px 0px;
 }
-.sectionPricing--containerInnerLeft {
-  width: 55%;
-}
-.sectionPricing--containerInnerRight {
-  width: 40%;
-  text-align: center;
-}
 
 .sectionPricing--prices {
   background: #fff;
@@ -266,5 +260,67 @@ i w ogłoszeniach"
 .sectionPricing--pricesInnerP {
   color: #002de2;
   font-size: 25px;
+}
+@media (min-width: 1024px) {
+  .mapSection--image,
+  .mapSection--paragraph {
+    width: 50%;
+  }
+  .archiveSection--image {
+    width: 100%;
+    height: 250px;
+  }
+  .sectionPricing--containerInnerLeft {
+    width: 55%;
+  }
+  .sectionPricing--containerInnerRight {
+    width: 40%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1023px) {
+  .archiveSection--image {
+    width: 100%;
+    height: 250px;
+  }
+  .mapSection--mapContainer {
+    width: 70%;
+  }
+  .sectionPricing--header {
+    text-align: center;
+  }
+  .sectionPricing--prices {
+    max-width: 70%;
+    margin: 20px auto 10px;
+  }
+}
+@media (max-width: 768px) {
+  .archiveSection--item {
+    width: 46%;
+  }
+  .archiveSection--image {
+    width: 100%;
+    height: 250px;
+  }
+  .mapSection--mapContainer {
+    width: 100%;
+    flex-direction: column;
+  }
+  .mapSection--paragraph {
+    margin: auto;
+    text-align: center;
+  }
+  .reasonsSection--container {
+    margin-top: 0px;
+  }
+  .sectionPricing--container {
+    margin-bottom: 0px;
+  }
+}
+@media (max-width: 500px) {
+  .sectionPricing--prices {
+    max-width: 90%;
+  }
 }
 </style>

@@ -46,4 +46,22 @@ defineProps({
   font-size: 20px;
   line-height: 100%;
 }
+@media (max-width: 1024px) {
+  .priceCircle {
+    width: 30%;
+  }
+}
+@media (max-width: 768px) {
+  .priceCircle {
+    width: 40%;
+  }
+}
+@media (max-width: 500px) {
+  .priceCircle--price {
+    font-size: 20px;
+  }
+  .priceCircle--amount {
+    font-size: 13px;
+  }
+}
 </style>

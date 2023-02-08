@@ -12,7 +12,7 @@
 export default {};
 </script>
 
-<style lang="css" scoped>
+<style scoped>
 .parallaxContainer {
   width: 50%;
   background-image: url(../assets/images/laptop-woman-2.jpg);
@@ -28,5 +28,11 @@ export default {};
   bottom: 0;
   left: 0;
   background-color: #002de2b2;
+}
+
+@media (max-width: 1024px) {
+  .parallaxContainer {
+    display: none;
+  }
 }
 </style>

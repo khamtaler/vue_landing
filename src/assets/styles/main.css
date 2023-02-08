@@ -48,3 +48,16 @@ p {
   display: flex;
   flex-direction: column;
 }
+
+@media (max-width: 1200px) {
+  .section {
+    padding: 20px;
+    text-align: center;
+  }
+  .section---fullWidth {
+    padding: 20px 0px;
+  }
+  .section---vertical {
+    padding: 20px;
+  }
+}

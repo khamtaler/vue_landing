@@ -2,8 +2,8 @@
   <div class="cityList">
     <h3 class="cityList--header">{{ header }}</h3>
     <slot></slot>
-    <ul class="cityList-list">
-      <li class="cityList-item" v-for="item in list">{{ item }}</li>
+    <ul class="cityList--list">
+      <li class="cityList--item" v-for="(item, index) in list" :key="index">{{ item }}</li>
     </ul>
   </div>
 </template>
@@ -21,7 +21,7 @@ defineProps({
 </script>
 
 <style scoped>
-.cityList-list {
+.cityList--list {
   column-count: 4;
   list-style: none;
 }
@@ -32,12 +32,44 @@ defineProps({
   line-height: 2rem;
   font-weight: 700;
 }
-.cityList-item {
+.cityList--item {
   line-height: 110%;
 }
-.cityList-item:before {
+.cityList--item:before {
   content: "• ";
-  font-size: 27px;
+
   color: #002de2;
+}
+@media (max-width: 1200px) {
+  .cityList--list {
+    text-align: start;
+  }
+}
+
+@media (min-width: 901px) {
+  .cityList--item:before {
+    font-size: 27px;
+  }
+}
+@media (max-width: 900px) {
+  .cityList--list {
+    column-count: 3;
+  }
+}
+@media (max-width: 650px) {
+  .cityList--list {
+    column-count: 2;
+    max-width: 400px;
+    margin: auto;
+  }
+}
+@media (max-width: 500px) {
+  .cityList--item {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .cityList--item:before {
+    font-size: 16px;
+  }
 }
 </style>

@@ -21,6 +21,7 @@ defineProps({
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
 }
 .reasonTile--iconContainer {
   width: 50%;
@@ -35,5 +36,40 @@ defineProps({
   text-align: center;
   margin-top: 20px;
   color: #fff;
+}
+@media (min-width: 1024px) {
+  .reasonTile {
+    max-width: 21%;
+  }
+}
+@media (max-width: 1023px) {
+  .reasonTile {
+    max-width: 90%;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 10px auto;
+  }
+  .reasonTile--iconContainer {
+    width: 100px;
+  }
+  .reasonTile--desc {
+    margin-top: 0px;
+    margin-left: 20px;
+    width: calc(100vw - 150px);
+  }
+}
+@media (max-width: 500px) {
+  .reasonTile {
+    max-width: 90%;
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 10px auto;
+  }
+  .reasonTile--desc {
+    margin-left: 0px;
+    width: 100%;
+  }
 }
 </style>

@@ -14,10 +14,7 @@ import ParallaxPhoto from "./ParallaxPhoto.vue";
       />
 
       <div class="wrapper">
-        <Heading
-          msg="DODAMY TWOJE OGŁOSZENIE
-DO PONAD 100 PORTALI OGŁOSZENIOWYCH"
-        />
+        <Heading msg="Szukasz pracownika w Polsce lub za granicą?" />
       </div>
     </header>
     <ParallaxPhoto>

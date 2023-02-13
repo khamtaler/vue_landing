@@ -1,13 +1,3 @@
-<template>
-  <div class="cityList">
-    <h3 class="cityList--header">{{ header }}</h3>
-    <slot></slot>
-    <ul class="cityList--list">
-      <li class="cityList--item" v-for="(item, index) in list" :key="index">{{ item }}</li>
-    </ul>
-  </div>
-</template>
-
 <script setup>
 defineProps({
   header: {
@@ -19,6 +9,15 @@ defineProps({
   },
 });
 </script>
+<template>
+  <div class="cityList">
+    <h3 class="cityList--header">{{ header }}</h3>
+    <slot></slot>
+    <ul class="cityList--list">
+      <li class="cityList--item" v-for="(item, index) in list" :key="index">{{ item }}</li>
+    </ul>
+  </div>
+</template>
 
 <style scoped>
 .cityList--list {
@@ -65,8 +64,8 @@ defineProps({
 }
 @media (max-width: 500px) {
   .cityList--item {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 11px;
+    line-height: 15px;
   }
   .cityList--item:before {
     font-size: 16px;

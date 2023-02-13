@@ -15,7 +15,7 @@ export default {};
 <style scoped>
 .parallaxContainer {
   width: 50%;
-  background-image: url(../assets/images/laptop-woman-2.jpg);
+  background-image: url(../assets/images/headerImage.jpg);
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 50% auto;

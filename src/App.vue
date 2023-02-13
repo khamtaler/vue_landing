@@ -17,23 +17,26 @@ import PriceCircle from "./components/PriceCircle.vue";
 <template>
   <Header />
   <main>
-    <DefaultSection class="mapSection" header="Jak to działa?">
+    <DefaultSection class="mapSection" header="Jak to działa...">
       <div>
         <p>
-          Tuogłoś.pl to jedyny w Polsce portal z ogłoszeniami drobnymi, ogłoszeniami nieruchomości,
-          ofertami pracy, ogłoszeniami auto-moto, który umożliwia automatyczną publikację Twojego
-          ogłoszenia w <b>100 portalach</b> ogłoszeniowych w stu największych miastach Polski.
+          Grupa portali Tuogłoś.pl to serwisy ogłoszeniowe z ofertami pracy, które umożliwiają
+          automatyczną publikację Twojego ogłoszenia w 133 portalach.
         </p>
         <div class="mapSection--mapContainer">
-          <img class="mapSection--image" src="./assets/images/mapa-nowa.png" />
+          <img
+            class="mapSection--image"
+            src="./assets/images/mapa-nowa.png"
+            alt="Poglądowa mapa nazw miast"
+          />
           <p class="mapSection--paragraph">
-            Możesz wybrać dowolną ilość portali lub dodać automatycznie swoje ogłoszenie do
-            wszystkich stu serwisów.
+            Dodajesz jedno ogłoszenie, a nasz system zamieszcza je we wszystkich portalach, które
+            sobie wybierzesz.
           </p>
         </div>
       </div>
     </DefaultSection>
-    <DefaultSection class="archiveSection" header="Jak zmienialiśmy sie na przestrzeni lat?">
+    <DefaultSection class="archiveSection" header="Jak zmienialiśmy sie na przestrzeni lat...">
       <div>
         <p class="archiveSection--intro">
           Wszystkie portale Grupy Tuogłoś mają ugruntowaną pozycję wśród polskich serwisów
@@ -44,17 +47,33 @@ import PriceCircle from "./components/PriceCircle.vue";
         </p>
         <div class="archiveSection--archive">
           <ArchiveTile class="archiveSection--archiveTile" year="2010r.">
-            <img class="archiveSection--image" src="./assets/images/2010.png" alt="Archive 2010" />
+            <img
+              class="archiveSection--image"
+              src="./assets/images/2010.png"
+              alt="Zdjęcie archiwalne 2010"
+            />
           </ArchiveTile>
           <ArchiveTile class="archiveSection--archiveTile" year="2018r."
-            ><img class="archiveSection--image" src="./assets/images/2018.png" alt="Archive 2018" />
+            ><img
+              class="archiveSection--image"
+              src="./assets/images/2018.png"
+              alt="Zdjęcie archiwalne  2018"
+            />
           </ArchiveTile>
 
           <ArchiveTile class="archiveSection--archiveTile" year="2020r."
-            ><img class="archiveSection--image" src="./assets/images/2020.png" alt="Archive 2020" />
+            ><img
+              class="archiveSection--image"
+              src="./assets/images/2020.png"
+              alt="Zdjęcie archiwalne  2020"
+            />
           </ArchiveTile>
           <ArchiveTile class="archiveSection--archiveTile" year="2022r."
-            ><img class="archiveSection--image" src="./assets/images/2021.png" alt="Archive 2022" />
+            ><img
+              class="archiveSection--image"
+              src="./assets/images/2021.png"
+              alt="Zdjęcie archiwalne  2022"
+            />
           </ArchiveTile>
         </div>
         <p class="archiveSection--rating">
@@ -102,7 +121,11 @@ i w ogłoszeniach"
       <CitiesList header="Portale w Polsce" :list="Data.POLISH_CITIES" />
     </DefaultSection>
     <DefaultSection class="section--citiesList">
-      <img class="section--citiesListMap" src="./assets/images/polonia.jpg" />
+      <img
+        class="section--citiesListMap"
+        src="./assets/images/polonia.png"
+        alt="Poglądowa grafika miast świata"
+      />
       <CitiesList header="Portale dla Polaków za granicą" :list="Data.WORLD_CITIES" />
     </DefaultSection>
     <DefaultSection class="sectionPricing section---fullWidth">
@@ -203,7 +226,7 @@ i w ogłoszeniach"
 
 .reasonsSection {
   background: linear-gradient(#002de291 100%, rgba(199, 0, 98, 0.5) 100%),
-    url(./assets/images/laptop-woman-2.jpg);
+    url(./assets/images/headerImage.jpg);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
